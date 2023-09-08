@@ -39,7 +39,6 @@ export class Board {
     }
 
     checkVictory() {
-        // Vérification des lignes, colonnes et diagonales
         for(let i = 0; i < 3; i++) {
             if(this.grid[i][0] !== '-' && this.grid[i][0] === this.grid[i][1] && this.grid[i][0] === this.grid[i][2]) {
                 this.hasWinner = true;

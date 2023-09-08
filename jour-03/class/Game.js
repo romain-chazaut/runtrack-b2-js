@@ -8,17 +8,17 @@ export class Game {
         this.board = new Board();
         this.currentTurn = this.player1;
         this.player1.isCurrentPlayer = true;
-        this.turnCount = 0;  // compteur de tours
+        this.turnCount = 0;  
     }
 
     startNewGame() {
-        document.getElementById("message").textContent = ""; // Réinitialiser le message
+        document.getElementById("message").textContent = ""; 
         this.board.initializeBoard();
         this.board.displayBoard();
         this.registerMove();
         this.currentTurn = this.player1;
         this.player1.isCurrentPlayer = true;
-        this.turnCount = 0;  // réinitialiser le compteur de tours
+        this.turnCount = 0;  
         document.getElementById('current-player').innerText = `Joueur actuel: ${this.currentTurn.symbol}`;
     }
 
@@ -29,12 +29,12 @@ export class Game {
         if (isValidMove) {
             this.board.displayBoard();
             this.registerMove();  
-            this.turnCount++;  // augmenter le compteur de tours
+            this.turnCount++;  
             
             if (this.checkGameOver()) {
                 setTimeout(() => {
                     this.announceWinner();
-                }, 100); // Attente courte pour s'assurer que le joueur voit le dernier mouvement
+                }, 100); 
                 return;
             }
             this.switchTurn();
@@ -75,7 +75,7 @@ export class Game {
             document.getElementById("message").textContent = "Match nul ! Essayez à nouveau.";
         }
 
-        // Vous pouvez ajouter un bouton "Rejouer" qui apparaît à la fin de chaque partie
+
         const replayButton = document.createElement("button");
         replayButton.textContent = "Rejouer";
         replayButton.addEventListener("click", () => {
