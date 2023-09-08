@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #eaeaea;
+        }
+    
+        #board {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .row {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    
+        .case {
+            width: 80px;
+            height: 80px;
+            font-size: 24px;
+            background-color: white;
+            border: 1px solid #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 5px;
+        }
+    
+        .case:last-child {
+            margin-right: 0;
+        }
+    
+        #play, #current-player, #turn, #message {
+            margin: 10px;
+            font-size: 18px;
+        }
+    
+        #play {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    
+        #play:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <p id="current-player">Joueur actuel: X</p>
+    <p id="message"></p>
+    <p id="turn"></p>
+    <button id="play">Nouvelle partie</button>
+    <div id="board"></div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
